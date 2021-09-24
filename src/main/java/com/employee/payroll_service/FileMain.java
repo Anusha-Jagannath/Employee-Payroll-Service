@@ -1,6 +1,8 @@
 package com.employee.payroll_service;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * 
@@ -11,6 +13,7 @@ import java.io.IOException;
  */
 public class FileMain {
 	static String path = "/Users/anushajs/eclipse-workspace/Yml-training/payroll-service/data";
+
 	public static void main(String[] args) throws IOException {
 		FileUtil fileUtil = new FileUtil();
 		// checking whether file exists or not
@@ -22,11 +25,15 @@ public class FileMain {
 
 		// creating a directory
 		fileUtil.createDirectory("lib");
-		
-		//create a empty file
+
+		// create a empty file
 		fileUtil.createEmptyFile("demo2.txt");
-		
-		//list directories and files
+
+		// list directories and files
 		fileUtil.listFilesDirectories(path);
+
+		//watch service example
+		Path dir = Paths.get(path);
+		new Java8WatchServiceExample(dir).processEvents();
 	}
 }
