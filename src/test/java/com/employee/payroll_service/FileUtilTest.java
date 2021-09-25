@@ -24,19 +24,21 @@ public class FileUtilTest {
 		Assert.assertFalse(util.isFileExists("demo2.txt"));
 
 	}
-	
+
 	@Test
 	public void givenDirectoryName_ShoulCreateDirectory_ReturnTrue() throws IOException {
 		FileUtil util = new FileUtil();
 		util.createDirectory("lib");
-		Assert.assertTrue(Files.isDirectory(Paths.get("/Users/anushajs/eclipse-workspace/Yml-training/payroll-service/data/lib")));
+		Assert.assertTrue(Files
+				.isDirectory(Paths.get("/Users/anushajs/eclipse-workspace/Yml-training/payroll-service/data/lib")));
 	}
-	
+
 	@Test
 	public void givenFileName_AsInput_ShouldCreateFile_ShouldReturntrue() throws IOException {
 		FileUtil util = new FileUtil();
 		util.createEmptyFile("demo2.txt");
-		Assert.assertTrue(Files.exists(Paths.get("/Users/anushajs/eclipse-workspace/Yml-training/payroll-service/data/demo2.txt")));
+		Assert.assertTrue(Files
+				.exists(Paths.get("/Users/anushajs/eclipse-workspace/Yml-training/payroll-service/data/demo2.txt")));
 	}
 
 }
