@@ -50,7 +50,7 @@ public class EmployeePayrollService {
 	}
 
 	/**
-	 * method to write the data to the file
+	 * UC-4 Create an Employee Payroll Service to store Employee Payroll into a File named employee.txt
 	 * 
 	 * @param employeeList
 	 */
@@ -71,6 +71,7 @@ public class EmployeePayrollService {
 	}
 
 	/**
+	 * UC-5 Ability for Employee Payroll Service to print the Employee Payroll
 	 * method to display the data from employee.txt
 	 *
 	 */
@@ -83,7 +84,10 @@ public class EmployeePayrollService {
 	}
 
 	/**
-	 * method to return no of entries in the employee.txt file
+	 * UC-5 Ability for Employee Payroll Service to show number of
+	 * 
+	 * Entries - Using File IO Count method to return no of entries in the
+	 * employee.txt file
 	 * 
 	 * @return
 	 * @throws IOException
