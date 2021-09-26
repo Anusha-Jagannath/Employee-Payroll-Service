@@ -8,7 +8,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class FileUtilTest {
-
+	/**
+	 * method to test file exists or not
+	 */
 	@Test
 	public void givenFileName_AsInput_ShouldReturnTrue_IfExists() {
 		FileUtil util = new FileUtil();
@@ -17,6 +19,11 @@ public class FileUtilTest {
 
 	}
 
+	/**
+	 * method to test file not exists
+	 * 
+	 * @throws IOException
+	 */
 	@Test
 	public void givenFileName_AsInput_ShouldReturnFalse_IfNotExists() throws IOException {
 		FileUtil util = new FileUtil();
@@ -25,6 +32,11 @@ public class FileUtilTest {
 
 	}
 
+	/**
+	 * method to test directory creation
+	 * 
+	 * @throws IOException
+	 */
 	@Test
 	public void givenDirectoryName_ShoulCreateDirectory_ReturnTrue() throws IOException {
 		FileUtil util = new FileUtil();
@@ -33,6 +45,11 @@ public class FileUtilTest {
 				.isDirectory(Paths.get("/Users/anushajs/eclipse-workspace/Yml-training/payroll-service/data/lib")));
 	}
 
+	/**
+	 * method to test empty file creation
+	 * 
+	 * @throws IOException
+	 */
 	@Test
 	public void givenFileName_AsInput_ShouldCreateFile_ShouldReturntrue() throws IOException {
 		FileUtil util = new FileUtil();
