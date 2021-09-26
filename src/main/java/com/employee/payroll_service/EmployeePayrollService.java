@@ -50,7 +50,8 @@ public class EmployeePayrollService {
 	}
 
 	/**
-	 * UC-4 Create an Employee Payroll Service to store Employee Payroll into a File named employee.txt
+	 * UC-4 Create an Employee Payroll Service to store Employee Payroll into a File
+	 * named employee.txt
 	 * 
 	 * @param employeeList
 	 */
@@ -95,6 +96,21 @@ public class EmployeePayrollService {
 	public long countLines() throws IOException {
 		long entries = 0;
 		entries = Files.lines(new File(path).toPath()).count();
+		return entries;
+	}
+
+	/** UC-6
+	 * Ability for Employee Payroll Service to read the Employee Payroll File so
+	 * that some analysis can be performed
+	 */
+	public long readEmployeeFile() {
+		long entries = 0;
+		try {
+			Files.lines(new File(path).toPath()).map(line -> line.trim()).forEach(line -> System.out.println(line));
+			entries = Files.lines(new File(path).toPath()).count();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return entries;
 	}
 
